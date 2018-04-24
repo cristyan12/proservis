@@ -16,7 +16,7 @@ class PrestadorController extends Controller
     {
         $prestadores = Prestador::orderBy('id', 'DESC')->paginate(10);
 
-        return view('prestadores.index', compact('prestadores'));
+        return view('prestador.index', compact('prestadores'));
     }
 
     /**
@@ -26,7 +26,7 @@ class PrestadorController extends Controller
      */
     public function create()
     {
-        return view('prestadores.create');
+        return view('prestador.create');
     }
 
     /**
@@ -37,9 +37,21 @@ class PrestadorController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'usuario_tipo' => 'required',
+            'contrato_id' => 'required',
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'direccion' => 'required',
+            'barrio_id' => 'required',
+            'telefono' => 'required',
+            'genero_id' => 'required',
+            'profesion_id' => 'required',
+        ]);
+
         $prestador = Prestador::create($request->all());
 
-        return redirect()->route('prestadores.edit', $prestador->id)
+        return redirect()->route('prestador.index', $prestador->id)
             ->with('info', 'Prestador creado correctamente');
     }
 
@@ -53,7 +65,7 @@ class PrestadorController extends Controller
     {
         $prestador = Prestador::find($id);
 
-        return view('prestadores.show', compact('prestador'));
+        return view('prestador.show', compact('prestador'));
     }
 
     /**
@@ -65,7 +77,7 @@ class PrestadorController extends Controller
     {
         $prestador = Prestador::find($id);
 
-        return view('prestadores.update', compact('prestador'));
+        return view('prestador.edit', compact('prestador'));
     }
 
     /**
@@ -81,7 +93,7 @@ class PrestadorController extends Controller
 
         $prestador->fill($request->all())->save();
 
-        return redirect()->route('prestadores.edit', $prestador->id)
+        return redirect()->route('prestador.index')
             ->with('info', 'Prestador actualizado correctamente');
     }
 

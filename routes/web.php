@@ -10,17 +10,27 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [
-	'uses' => 'PrestadorController@index',
-	'as' => 'prestadores.index'
+
+Route::resources([
+	'prestador' => 'PrestadorController'
 ]);
 
-Route::get('/prestadores/create', [
-	'uses' => 'PrestadorController@create',
-	'as' => 'prestadores.create'
-]);
+// Route::get('/', [
+// 	'uses' => 'PrestadorController@index',
+// 	'as' => 'prestadores.index'
+// ]);
 
-Route::post('/prestadores/store', [
-	'uses' => 'PrestadorController@store',
-	'as' => 'prestadores.store'
-]);
+// Route::get('/prestadores/create', [
+// 	'uses' => 'PrestadorController@create',
+// 	'as' => 'prestadores.create'
+// ]);
+
+// Route::get('/prestadores/show/{id}', [
+// 	'uses' => 'PrestadorController@show',
+// 	'as' => 'prestador.show'
+// ]);
+
+// Route::post('prestadores', [
+// 	'uses' => 'PrestadorController@store',
+// 	'as' => 'prestadores.store'
+// ]);

@@ -18,15 +18,15 @@ class CreateTablePrestador extends Migration
 
             $table->string('nit', 20)->nullable();
             $table->string('cedula', 20)->nullable();
-            $table->integer('usuario_tipo');
-            $table->integer('contrato_id');
+            $table->integer('usuario_tipo')->default(1);
+            $table->integer('contrato_id')->default(1);
             $table->string('nombre', 50);
             $table->string('apellido', 50);
             $table->string('direccion');
-            $table->integer('barrio_id');
+            $table->integer('barrio_id')->default(1);
             $table->string('telefono', 20);
-            $table->integer('genero_id');
-            $table->integer('profesion_id');
+            $table->integer('genero_id')->default(1);
+            $table->integer('profesion_id')->default(1);
             $table->tinyInteger('estado')->default(1);
             $table->tinyInteger('borrado')->default(0);
 
