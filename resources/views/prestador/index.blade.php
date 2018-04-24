@@ -30,7 +30,7 @@
                         <a href="{{ route('prestador.show', $prestador->id) }}" class="btn btn-info btn-sm">Ver</a>
 					</td>
 					<td width="10px">
-                        <a href="{{ route('prestador.edit', $prestador->id) }}" class="btn btn-secondary btn-sm">Editar</a>
+                        <a href="{{ route('prestador.edit', $prestador->id) }}" class="btn btn-warning btn-sm">Editar</a>
 					</td>
 					<td width="10px">
                         {!! Form::open(['route' => ['prestador.destroy', $prestador->id], 'method' => 'DELETE']) !!}

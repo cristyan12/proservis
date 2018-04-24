@@ -103,14 +103,14 @@
 			    <label for="estado">Estado</label>
 			    <select name="estado" class="form-control">
 			        <option selected>1</option>
-			        <option>2</option>
+			        <option>0</option>
 			    </select>
 			</div>
 			<div class="form-group col-md-3">
-			    <label for="borrado">Estado</label>
+			    <label for="borrado">Borrado</label>
 			    <select name="borrado" class="form-control">
 			        <option selected>1</option>
-			        <option>2</option>
+			        <option>0</option>
 			    </select>
 			</div>
 		</div>
