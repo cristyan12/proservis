@@ -4,6 +4,8 @@
 	<h1>Nuevo Prestador</h1>
 	<hr>
 	<form action="{{ route('prestadores.store') }}" method="POST">
+
+		{{ csrf_field() }}
 		
 		{{-- Nit y cedula --}}
 		<div class="form-row">
