@@ -7,7 +7,7 @@
 	<div class="card">
 		<div class="card-body">
 			<h5 class="card-title">{{ title_case($prestador->nombre .' '. $prestador->apellido) }}</h5>
-			<h6 class="card-subtitle mb-2 text-muted">{{ $prestador->nit }} {{ $prestador->cedula }}</h6>
+			<h6 class="card-subtitle mb-2 text-muted">Nit: {{ $prestador->nit }} Cédula: {{ $prestador->cedula }}</h6>
 			<p class="card-text">Tipo de usuario: {{ $prestador->usuario_tipo }}</p>
 			<p class="card-text">Contrato: {{ $prestador->contrato_id }}</p>
 			<p class="card-text">Dirección: {{ $prestador->direccion }}</p>

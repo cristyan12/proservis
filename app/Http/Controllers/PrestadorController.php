@@ -14,7 +14,7 @@ class PrestadorController extends Controller
      */
     public function index()
     {
-        $prestadores = Prestador::orderBy('id', 'DESC')->paginate(10);
+        $prestadores = Prestador::orderBy('id', 'ASC')->paginate(10);
 
         return view('prestador.index', compact('prestadores'));
     }
