@@ -32,14 +32,14 @@
 		
 		{{-- usuario_id y contrato_id --}}
 		<div class="form-row">
-			<div class="form-group col-md-6">
+			<div class="form-group col-md-3">
 			    <label for="usuario_tipo">Usuario</label>
 			    <select id="usuario_tipo" name="usuario_tipo" class="form-control">
 			    	<option selected>1</option>
 			        <option>2</option>
 			    </select>
 			</div>
-			<div class="form-group col-md-6">
+			<div class="form-group col-md-3">
 			    <label for="contrato_id">Contrato</label>
 			    <select id="contrato_id" name="contrato_id" class="form-control">
 			    	<option selected>1</option>
